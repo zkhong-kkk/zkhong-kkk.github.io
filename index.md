@@ -1,13 +1,11 @@
-个人学术主页完整模板（美观版）
 
 ---
 title: "Zekun Hong's homepage"
-layout: default
 ---
 
 <!-- 顶部个人信息栏（居中、美观排版） -->
 <div style="text-align: center; margin: 40px 0; padding: 30px; background-color: #f8f9fa; border-radius: 10px;">
-  <h1 style="color: #2c3e50; margin-bottom: 10px; font-size: 2.2em;">钟某某 <small style="color: #7f8c8d; font-size: 0.8em;">Zhong Moumou</small></h1>
+  <h1 style="color: #2c3e50; margin-bottom: 10px; font-size: 2.2em;">Zekun Hong<small style="color: #7f8c8d; font-size: 0.8em;"></small></h1>
   <p style="color: #34495e; font-size: 1.1em; line-height: 1.6;">
      Bsc|  <br>
     <strong>Fudan University</strong> | Shanghai China <br>
