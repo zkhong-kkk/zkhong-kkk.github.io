@@ -5,51 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zekun Hong's Homepage</title>
     <style>
-        /* 全局样式重置+科幻基础配置 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: 'Consolas', 'Courier New', 'Microsoft YaHei', sans-serif;
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
             max-width: 1100px;
             margin: 0 auto;
             padding: 40px 20px;
-            background: #0a0e17; /* 深空黑背景 */
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(66, 153, 225, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(56, 178, 172, 0.1) 0%, transparent 20%);
-            color: #e0e8ff;
+            background: #ffffff;
+            color: #2d3748;
             line-height: 1.7;
-            overflow-x: hidden;
         }
-        /* 全局光效动画 */
-        @keyframes glow {
-            0% { box-shadow: 0 0 10px rgba(66, 153, 225, 0.5), 0 0 20px rgba(66, 153, 225, 0.3); }
-            50% { box-shadow: 0 0 20px rgba(66, 153, 225, 0.8), 0 0 30px rgba(66, 153, 225, 0.5); }
-            100% { box-shadow: 0 0 10px rgba(66, 153, 225, 0.5), 0 0 20px rgba(66, 153, 225, 0.3); }
-        }
-        @keyframes neonPulse {
-            0% { text-shadow: 0 0 5px #4299e1, 0 0 10px #4299e1; }
-            50% { text-shadow: 0 0 10px #4299e1, 0 0 20px #4299e1, 0 0 30px #38b2ac; }
-            100% { text-shadow: 0 0 5px #4299e1, 0 0 10px #4299e1; }
-        }
-        /* 顶部头像+信息区域（玻璃拟态+科幻光效） */
         .header {
             display: flex;
             align-items: center;
             gap: 50px;
-            background: rgba(15, 23, 42, 0.7); /* 玻璃拟态背景 */
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(66, 153, 225, 0.3);
+            background: #ffffff;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 0 30px rgba(66, 153, 225, 0.2);
+            box-shadow: 0 4px 20px rgba(66, 153, 225, 0.1);
             margin-bottom: 40px;
             flex-wrap: wrap;
             justify-content: center;
-            animation: glow 4s infinite alternate;
+            border: 1px solid rgba(66, 153, 225, 0.15);
         }
         .avatar {
             width: 180px;
@@ -57,25 +38,12 @@
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #4299e1;
-            box-shadow: 0 0 20px rgba(66, 153, 225, 0.6), inset 0 0 10px rgba(56, 178, 172, 0.4);
-            transition: all 0.5s ease;
-            position: relative;
-        }
-        .avatar::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 50%;
-            border: 1px solid rgba(66, 153, 225, 0.5);
-            animation: glow 3s infinite alternate;
-            z-index: -1;
+            box-shadow: 0 0 20px rgba(66, 153, 225, 0.2);
+            transition: all 0.4s ease;
         }
         .avatar:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 0 30px rgba(66, 153, 225, 0.8), inset 0 0 15px rgba(56, 178, 172, 0.6);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(66, 153, 225, 0.3);
         }
         .info {
             text-align: center;
@@ -83,81 +51,50 @@
             min-width: 300px;
         }
         .info h1 {
-            font-size: 2.8em;
-            color: #ffffff;
+            font-size: 2.5em;
+            color: #2d3748;
             margin-bottom: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: neonPulse 3s infinite alternate;
+            font-weight: 600;
         }
         .info p {
             font-size: 1.1em;
-            color: #a5b4fc;
+            color: #4a5568;
             margin: 8px 0;
-            text-shadow: 0 0 5px rgba(165, 180, 252, 0.3);
         }
         .info a {
-            color: #67e8f9;
+            color: #4299e1;
             text-decoration: none;
             transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
         }
         .info a:hover {
-            color: #ffffff;
-            border-bottom: 1px solid #67e8f9;
-            text-shadow: 0 0 10px #67e8f9;
+            color: #2b6cb0;
         }
-        /* 通用板块样式（科幻卡片） */
         .section {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(66, 153, 225, 0.2);
+            background: #ffffff;
             padding: 35px;
             border-radius: 20px;
-            box-shadow: 0 0 25px rgba(66, 153, 225, 0.15);
+            box-shadow: 0 4px 20px rgba(66, 153, 225, 0.08);
             margin-bottom: 30px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #4299e1, transparent);
-            animation: gradientMove 5s infinite linear;
-        }
-        @keyframes gradientMove {
-            0% { background-position: -100% 0; }
-            100% { background-position: 100% 0; }
+            border: 1px solid rgba(66, 153, 225, 0.1);
+            transition: all 0.3s ease;
         }
         .section:hover {
-            box-shadow: 0 0 40px rgba(66, 153, 225, 0.3);
-            border-color: rgba(66, 153, 225, 0.4);
-            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(66, 153, 225, 0.15);
         }
         .section h2 {
-            color: #ffffff;
+            color: #2d3748;
             font-size: 1.8em;
             margin-bottom: 25px;
             padding-left: 20px;
             border-left: 3px solid #4299e1;
             font-weight: 600;
-            text-shadow: 0 0 8px rgba(66, 153, 225, 0.4);
         }
-        /* 个人简介 */
         .bio p {
             font-size: 1.1em;
-            color: #cbd5e1;
+            color: #4a5568;
             text-indent: 2em;
             line-height: 1.8;
-            text-shadow: 0 0 5px rgba(203, 213, 225, 0.1);
         }
-        /* 研究方向（霓虹标签） */
         .interests ul {
             list-style: none;
             display: flex;
@@ -166,84 +103,62 @@
         }
         .interests li {
             background: rgba(66, 153, 225, 0.1);
-            border: 1px solid rgba(66, 153, 225, 0.3);
-            color: #e0f2fe;
+            color: #2d3748;
             padding: 12px 24px;
             border-radius: 50px;
             font-size: 1.05em;
             transition: all 0.3s ease;
-            text-shadow: 0 0 5px rgba(224, 242, 254, 0.3);
         }
         .interests li:hover {
-            background: linear-gradient(135deg, #4299e1 0%, #38b2ac 100%);
-            color: #ffffff;
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 0 15px rgba(66, 153, 225, 0.5);
+            background: #4299e1;
+            color: #fff;
+            transform: translateY(-2px);
         }
-        /* 通用表格样式（科幻表格） */
         .edu table, .research table {
             width: 100%;
             border-collapse: collapse;
             font-size: 1.05em;
-            background: rgba(15, 23, 42, 0.4);
+            background: #ffffff;
             border-radius: 10px;
             overflow: hidden;
         }
         .edu th, .research th {
-            background: linear-gradient(90deg, #4299e1, #38b2ac);
-            color: #ffffff;
+            background: #4299e1;
+            color: #fff;
             padding: 15px;
             text-align: center;
             font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(66, 153, 225, 0.2);
         }
         .edu td, .research td {
             padding: 15px;
             text-align: center;
-            border: 1px solid rgba(66, 153, 225, 0.2);
-            color: #cbd5e1;
-            transition: all 0.2s ease;
+            border: 1px solid rgba(66, 153, 225, 0.15);
+            color: #4a5568;
         }
         .edu tr:nth-child(even), .research tr:nth-child(even) {
-            background: rgba(66, 153, 225, 0.05);
+            background: rgba(66, 153, 225, 0.03);
         }
         .edu tr:hover, .research tr:hover {
-            background: rgba(66, 153, 225, 0.1);
-            box-shadow: 0 0 10px rgba(66, 153, 225, 0.2);
+            background: rgba(66, 153, 225, 0.08);
         }
-        /* 联系方式（赛博渐变） */
         .contact {
             text-align: center;
-            background: linear-gradient(135deg, rgba(66, 153, 225, 0.8) 0%, rgba(56, 178, 172, 0.8) 100%);
-            color: #ffffff;
-            border: none;
-            box-shadow: 0 0 30px rgba(66, 153, 225, 0.4);
+            background: linear-gradient(135deg, #4299e1, #38b2ac);
+            color: #fff;
         }
         .contact h2 {
-            color: #ffffff;
-            border-left: 3px solid #ffffff;
+            color: #fff;
+            border-left: 3px solid #fff;
             display: inline-block;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-        .contact p {
-            font-size: 1.1em;
-            margin: 10px 0;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
         }
         .contact a {
-            color: #e0f2fe;
+            color: #e8f4f8;
             text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
         }
         .contact a:hover {
-            color: #ffffff;
-            border-bottom: 2px solid #ffffff;
-            text-shadow: 0 0 15px #ffffff;
+            color: #fff;
         }
-        /* 响应式适配（手机端科幻效果不丢失） */
         @media (max-width: 768px) {
             .header {
                 padding: 25px;
@@ -254,19 +169,15 @@
                 height: 150px;
             }
             .info h1 {
-                font-size: 2.2em;
+                font-size: 2em;
             }
             .section {
                 padding: 25px;
-            }
-            .interests ul {
-                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 顶部：头像+个人信息 -->
     <div class="header">
         <img class="avatar" src="https://raw.githubusercontent.com/zkhong-kkk/zkhong-kkk.github.io/master/me.jpg" alt="Zekun Hong">
         <div class="info">
@@ -278,7 +189,6 @@
         </div>
     </div>
 
-    <!-- 个人简介 -->
     <div class="section bio">
         <h2>👨‍🎓 About Me</h2>
         <p>
@@ -289,7 +199,6 @@
         </p>
     </div>
 
-    <!-- 研究方向 -->
     <div class="section interests">
         <h2>🎯 Research Interests</h2>
         <ul>
@@ -299,7 +208,6 @@
         </ul>
     </div>
 
-    <!-- 教育背景 -->
     <div class="section edu">
         <h2>🎓 Education Background</h2>
         <table>
@@ -324,7 +232,6 @@
         </table>
     </div>
 
-    <!-- 研究经历（空表格） -->
     <div class="section research">
         <h2>🔬 Research Experience</h2>
         <table>
@@ -337,12 +244,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- 空表格，后续可在这里添加<tr><td>内容</td></tr> -->
             </tbody>
         </table>
     </div>
 
-    <!-- 联系方式 -->
     <div class="section contact">
         <h2>📞 Contact Me</h2>
         <p>Email: <a href="mailto:25300740018@m.fudan.edu.cn">25300740018@m.fudan.edu.cn</a></p>
