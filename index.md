@@ -1,5 +1,3 @@
-个人学术主页完整模板（美观版·照片左上角）
-
 ---
 Zekun Hong's homepage
 ---
@@ -7,7 +5,7 @@ Zekun Hong's homepage
 <!-- 顶部：照片（左上角）+ 个人信息（右侧居中），整体排版美观 -->
 <div style="margin: 40px 0; padding: 30px; background-color: #f8f9fa; border-radius: 10px; display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
   <!-- 左上角照片，固定尺寸、圆形边框 -->
-  <img src="images/me.jpg" style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:4px solid #3498db; flex-shrink: 0;">
+ <img src="https://zkhong-kkk.github.io/images/me.jpg" style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:4px solid #3498db; flex-shrink: 0;">
   <!-- 右侧个人信息，居中对齐 -->
   <div style="flex: 1; min-width: 300px; text-align: center;">
     <h1 style="color: #2c3e50; margin-bottom: 10px; font-size: 2.2em;">Zekun Hong<small style="color: #7f8c8d; font-size: 0.8em;"></small></h1>
