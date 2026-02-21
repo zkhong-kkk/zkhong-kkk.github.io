@@ -1,18 +1,18 @@
 # ===================== 网站基础配置（必填）=====================
-title: "【你的姓名】 - 个人学术主页"          # 浏览器标签栏显示的标题
-name: "【你的姓名】"                          # 主页顶部显示的姓名
-description: "【你的学校/单位】 | 【研究方向，如：机器学习、计算机视觉、大数据】"  # 主页简短描述
+title: "钟某某 - 个人学术主页"          # 浏览器标签栏显示的标题
+name: "钟某某"                          # 主页顶部显示的姓名
+description: "XX大学计算机学院 | 研究方向：机器学习、计算机视觉"  # 主页简短描述
 repository: zkhong-kkk/zkhong-kkk.github.io   # 你的仓库地址（无需修改）
 url: "https://zkhong-kkk.github.io"           # 你的主页地址（无需修改）
 baseurl: ""                                   # 留空（无需修改）
 
 # ===================== 作者核心信息（必填）=====================
 author:
-  name: "【你的姓名】"                          # 与上面name一致
-  bio: "【详细学术简介，如：XX大学XX学院硕士研究生，师从XX教授，主要研究方向为XXX，参与XX国家级项目，发表SCI/EI论文X篇】"  # 主页展示的详细简介
-  location: "【所在城市，如：中国 · 北京/中国 · 上海】"          # 所在城市
-  employer: "【你的学校/单位，如：清华大学计算机科学与技术系/XX研究院】"  # 所属机构
-  email: "【你的学术邮箱，如：zkhong@xxx.edu.cn】"               # 联系邮箱
+  name: "钟某某"                          # 与上面name一致
+  bio: "XX大学计算机学院硕士研究生，师从XX教授，主要研究方向为机器学习，参与XX国家级项目，发表SCI论文2篇"  # 主页展示的详细简介
+  location: "中国 · 北京"          # 所在城市
+  employer: "XX大学计算机科学与技术系"  # 所属机构
+  email: "zkhong@xxx.edu.cn"               # 联系邮箱
   avatar: "/images/profile.png"                # 头像路径（后续上传头像命名为profile.png即可，无需修改）
 
 # ===================== 主题与界面配置（可选修改）=====================
@@ -40,18 +40,8 @@ nav_main:
 social_links:
   - icon: "github"                # GitHub图标
     url: "https://github.com/zkhong-kkk"  # 你的GitHub链接（已填好，无需改）
-  - icon: "google-scholar"        # Google Scholar图标
-    url: "【你的Google Scholar链接，没有就删掉这两行】"
-  - icon: "researchgate"          # ResearchGate图标
-    url: "【你的ResearchGate链接，没有就删掉这两行】"
-  - icon: "orcid"                 # ORCID图标
-    url: "【你的ORCID链接，没有就删掉这两行】"
-  - icon: "linkedin"              # LinkedIn图标
-    url: "【你的LinkedIn链接，没有就删掉这两行】"
   - icon: "envelope"              # 邮箱图标
-    url: "mailto:【你的邮箱】"     # 点击可直接发邮件（替换成你的邮箱）
-  - icon: "weixin"                # 微信图标（可选）
-    label: "【你的微信号】"        # 鼠标悬停显示微信号
+    url: "mailto:zkhong@xxx.edu.cn"     # 点击可直接发邮件（替换成你的邮箱）
 
 # ===================== 功能配置（无需修改）=====================
 # 分页设置
