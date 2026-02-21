@@ -117,13 +117,13 @@
             color: #fff;
             transform: translateY(-2px);
         }
-        /* 教育背景表格 */
-        .edu table {
+        /* 通用表格样式（教育+研究经历） */
+        .edu table, .research table {
             width: 100%;
             border-collapse: collapse;
             font-size: 1.05em;
         }
-        .edu th {
+        .edu th, .research th {
             background-color: #4299e1;
             color: #fff;
             padding: 15px;
@@ -131,16 +131,16 @@
             font-weight: 500;
             border: 1px solid #e2e8f0;
         }
-        .edu td {
+        .edu td, .research td {
             padding: 15px;
             text-align: center;
             border: 1px solid #e2e8f0;
             color: #4a5568;
         }
-        .edu tr:nth-child(even) {
+        .edu tr:nth-child(even), .research tr:nth-child(even) {
             background-color: #f8f9fa;
         }
-        .edu tr:hover {
+        .edu tr:hover, .research tr:hover {
             background-color: #e8f4f8;
         }
         /* 联系方式 */
@@ -209,9 +209,9 @@
         <h2>👨‍🎓 About Me</h2>
         <p>
             Hello! I'm Zekun Hong from China, currently pursuing a Bachelor's degree in Environment Science at Fudan University. 
-            While my major is in environmental science, my academic interests lie more in the interdisciplinary fields of data science, 
-            Human-Computer Interaction (HCI), and machine learning. I am eager to explore how data-driven approaches and user-centric design 
-            can solve complex real-world problems.
+            While my major is in environmental science, my academic interests lie more in the incredible fields of data science, 
+            Human-Computer Interaction (HCI), and machine learning but I'm no sure which one I would reseaech it deeply.If you are 
+            interested in history,AI,economy,please feel free to contact with me and maybe we can make friends.
         </p>
     </div>
 
@@ -219,9 +219,9 @@
     <div class="section interests">
         <h2>🎯 Research Interests</h2>
         <ul>
-            <li>Data Science</li>
-            <li>Human-Computer Interaction (HCI)</li>
-            <li>Machine Learning</li>
+            <li>Data Science(maybe)</li>
+            <li>Human-Computer Interaction (HCI)(maybe)</li>
+            <li>Machine Learning(maybe)</li>
         </ul>
     </div>
 
@@ -246,6 +246,24 @@
                     <td>Environment Science</td>
                     <td>Undergraduate</td>
                 </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 研究经历（空表格） -->
+    <div class="section research">
+        <h2>🔬 Research Experience</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time Period</th>
+                    <th>Project/Topic</th>
+                    <th>Role</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 空表格，后续可在这里添加<tr><td>内容</td></tr> -->
             </tbody>
         </table>
     </div>
