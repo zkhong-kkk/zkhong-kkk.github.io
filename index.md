@@ -1,12 +1,12 @@
 ---
-title: "zkhong;s homepage"
-layout: default
 ---
 
-# 钟某某 <small>Zhong Moumou</small>
+# Zekun Hong <small>
 **BSc** |
-Fudan University| Shanghai China
-📧 25300740018@m.fudan.edu.cn| 🔗 [GitHub](https://github.com/zkhong-kkk)
+Fudan University| 
+Shanghai China
+📧 25300740018@m.fudan.edu.cn|
+🔗 [GitHub](https://github.com/zkhong-kkk)
 
 ## 🎯 研究方向
 
