@@ -2,27 +2,193 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zekun Hong's homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zekun Hong's Homepage</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .header { margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 10px; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #3498db; flex-shrink: 0; }
-        .info { flex: 1; min-width: 300px; text-align: center; }
-        .info h1 { color: #2c3e50; margin-bottom: 10px; font-size: 2.2em; }
-        .info p { color: #34495e; font-size: 1.1em; line-height: 1.6; }
-        .section { margin-bottom: 40px; }
-        .section h2 { color: #2c3e50; border-left: 4px solid #3498db; padding-left: 15px; margin-bottom: 20px; }
-        .bio p { color: #4a4a4a; line-height: 1.8; font-size: 1.05em; text-indent: 2em; }
-        .interests { padding: 25px; background: #fafafa; border-radius: 8px; }
-        .interests ul { color: #4a4a4a; line-height: 2.0; font-size: 1.05em; list-style: none; padding: 0; }
-        .interests li { margin-bottom: 10px; }
-        .edu table { width: 100%; border-collapse: collapse; font-size: 1.05em; }
-        .edu th { padding: 12px; text-align: center; border: 1px solid #ddd; background: #3498db; color: white; }
-        .edu td { padding: 12px; text-align: center; border: 1px solid #ddd; color: #4a4a4a; }
-        .contact { text-align: center; padding: 25px; background: #2c3e50; color: white; border-radius: 10px; }
-        .contact h2 { margin-bottom: 20px; font-size: 1.5em; }
-        .contact p { line-height: 1.8; font-size: 1.05em; }
-        a { color: #3498db; text-decoration: none; }
+        /* 全局样式重置+基础配置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+        /* 顶部头像+信息区域 */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e8f4f8;
+            box-shadow: 0 8px 24px rgba(66, 153, 225, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+        .info {
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+        }
+        .info h1 {
+            font-size: 2.5em;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .info p {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin: 8px 0;
+        }
+        .info a {
+            color: #4299e1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .info a:hover {
+            color: #2b6cb0;
+            text-decoration: underline;
+        }
+        /* 通用板块样式 */
+        .section {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: box-shadow 0.3s ease;
+        }
+        .section:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+        }
+        .section h2 {
+            color: #2d3748;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 5px solid #4299e1;
+            font-weight: 600;
+        }
+        /* 个人简介 */
+        .bio p {
+            font-size: 1.1em;
+            color: #4a5568;
+            text-indent: 2em;
+            line-height: 1.8;
+        }
+        /* 研究方向 */
+        .interests ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .interests li {
+            background-color: #e8f4f8;
+            color: #2d3748;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.05em;
+            transition: all 0.2s ease;
+        }
+        .interests li:hover {
+            background-color: #4299e1;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        /* 教育背景表格 */
+        .edu table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05em;
+        }
+        .edu th {
+            background-color: #4299e1;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+        .edu td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+        .edu tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .edu tr:hover {
+            background-color: #e8f4f8;
+        }
+        /* 联系方式 */
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #4299e1 0%, #38b2ac 100%);
+            color: #fff;
+        }
+        .contact h2 {
+            color: #fff;
+            border-left: 5px solid #fff;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .contact a {
+            color: #e8f4f8;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .contact a:hover {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+        /* 响应式适配（手机端也好看） */
+        @media (max-width: 768px) {
+            .header {
+                padding: 25px;
+                gap: 30px;
+            }
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+            .info h1 {
+                font-size: 2em;
+            }
+            .section {
+                padding: 25px;
+            }
+            .interests ul {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -31,61 +197,64 @@
         <img class="avatar" src="https://raw.githubusercontent.com/zkhong-kkk/zkhong-kkk.github.io/master/me.jpg" alt="Zekun Hong">
         <div class="info">
             <h1>Zekun Hong</h1>
-            <p>
-                Bsc | <br>
-                <strong>Fudan University</strong> | Shanghai China <br>
-                📧 <a href="mailto:25300740018@m.fudan.edu.cn">25300740018@m.fudan.edu.cn</a> | 🔗 <a href="https://github.com/zkhong-kkk">GitHub</a>
-            </p>
+            <p>Bachelor of Science</p>
+            <p><strong>Fudan University</strong> | Shanghai, China</p>
+            <p>📧 <a href="mailto:25300740018@m.fudan.edu.cn">25300740018@m.fudan.edu.cn</a></p>
+            <p>🔗 <a href="https://github.com/zkhong-kkk">GitHub Profile</a></p>
         </div>
     </div>
 
-    <!-- 主体内容 -->
+    <!-- 个人简介 -->
     <div class="section bio">
-        <h2>👨‍🎓 个人简介</h2>
+        <h2>👨‍🎓 About Me</h2>
         <p>
-            Hello, everybody! I'm Zekun Hong from China. Now I'm majoring in Environment Science at Fudan University, but I don't like it. I think I am more interested in data science, Human-Computer-Interaction and machine learning.
+            Hello! I'm Zekun Hong from China, currently pursuing a Bachelor's degree in Environment Science at Fudan University. 
+            While my major is in environmental science, my academic interests lie more in the interdisciplinary fields of data science, 
+            Human-Computer Interaction (HCI), and machine learning. I am eager to explore how data-driven approaches and user-centric design 
+            can solve complex real-world problems.
         </p>
     </div>
 
+    <!-- 研究方向 -->
     <div class="section interests">
-        <h2>🎯 研究方向</h2>
+        <h2>🎯 Research Interests</h2>
         <ul>
-            <li>✅ data science</li>
-            <li>✅ Human-Computer-Interaction</li>
-            <li>✅ machine learning</li>
+            <li>Data Science</li>
+            <li>Human-Computer Interaction (HCI)</li>
+            <li>Machine Learning</li>
         </ul>
     </div>
 
+    <!-- 教育背景 -->
     <div class="section edu">
-        <h2>🎓 教育背景</h2>
+        <h2>🎓 Education Background</h2>
         <table>
             <thead>
                 <tr>
-                    <th>时间</th>
-                    <th>学校</th>
-                    <th>学历</th>
-                    <th>专业</th>
-                    <th>备注</th>
+                    <th>Time Period</th>
+                    <th>University</th>
+                    <th>Degree</th>
+                    <th>Major</th>
+                    <th>Notes</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>2025-</td>
+                    <td>2025 - Present</td>
                     <td>Fudan University</td>
                     <td>BSc</td>
                     <td>Environment Science</td>
-                    <td>-</td>
+                    <td>Undergraduate</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <!-- 联系方式 -->
     <div class="section contact">
-        <h2>📞 联系方式</h2>
-        <p>
-            邮箱：<a href="mailto:25300740018@m.fudan.edu.cn">25300740018@m.fudan.edu.cn</a> <br>
-            GitHub：<a href="https://github.com/zkhong-kkk">https://github.com/zkhong-kkk</a> <br>
-        </p>
+        <h2>📞 Contact Me</h2>
+        <p>Email: <a href="mailto:25300740018@m.fudan.edu.cn">25300740018@m.fudan.edu.cn</a></p>
+        <p>GitHub: <a href="https://github.com/zkhong-kkk">https://github.com/zkhong-kkk</a></p>
     </div>
 </body>
 </html>
