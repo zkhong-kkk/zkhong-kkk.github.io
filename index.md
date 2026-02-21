@@ -1,6 +1,6 @@
 
 ---
-title: "Zekun Hong's homepage"
+"Zekun Hong's homepage"
 ---
 
 <!-- 顶部个人信息栏（居中、美观排版） -->
@@ -9,7 +9,7 @@ title: "Zekun Hong's homepage"
   <p style="color: #34495e; font-size: 1.1em; line-height: 1.6;">
      Bsc|  <br>
     <strong>Fudan University</strong> | Shanghai China <br>
-    📧 <a href="mailto:zkhong@xxx.edu.cn" style="color: #3498db; text-decoration: none;">zkhong@xxx.edu.cn</a> | 🔗 <a href="https://github.com/zkhong-kkk" style="color: #3498db; text-decoration: none;">GitHub</a>
+    📧 <a href="mailto:25300740018@m.fudan.edu.cn" style="color: #3498db; text-decoration: none;">25300740018@m.fudan.edu.cn</a> | 🔗 <a href="https://github.com/zkhong-kkk" style="color: #3498db; text-decoration: none;">GitHub</a>
   <p>
 <div>
 
@@ -20,8 +20,8 @@ title: "Zekun Hong's homepage"
 <div style="margin-bottom: 40px;">
   <h2 style="color: #2c3e50; border-left: 4px solid #3498db; padding-left: 15px; margin-bottom: 20px;">👨‍🎓 个人简介</h2>
   <p style="color: #4a4a4a; line-height: 1.8; font-size: 1.05em; text-indent: 2em;">
-    Hello,everybody!I'm Zekun Hong which come from Fudan University.Now I'm major in Environment Science but I don't like it
-    so I am scheduled to do research on data science.
+    Hello,everybody!I'm Zekun Hong which come from China.Now I'm major in Environment Science in Fudan University but I don't like it.
+    I think that I am more interesting in data science,Human-Computer-Interaction and machine learning.
   <p>
 <div>
 
@@ -30,6 +30,8 @@ title: "Zekun Hong's homepage"
   <h2 style="color: #2c3e50; border-left: 4px solid #3498db; padding-left: 15px; margin-bottom: 20px;">🎯 研究方向</h2>
   <ul style="color: #4a4a4a; line-height: 2.0; font-size: 1.05em; list-style: none; padding: 0;">
     <li style="margin-bottom: 10px;">✅ data science</li>
+    <li style="margin-bottom: 10px;">✅ Human-Computer-Interaction</li>
+    <li style="margin-bottom: 10px;">✅ machine learning</li>
     
   <ul>
 <div>
